@@ -1,7 +1,7 @@
 import writer_styles
 
 def generate_story_prompt(
-    AGE_GROUP, Gender, Number, LANGUAGE, Heros_name,
+    AGE_GROUP, Gender, LANGUAGE, Heros_name,
     Race_species, Magic_or_weapon_preference, Role_in_the_current_world,
     previous_episode=None, current_episode=1
 ):

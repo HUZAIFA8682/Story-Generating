@@ -1,6 +1,7 @@
 import gettextfromGemini as gtfg
 from story_manager import StoryManager
 import json
+import HeroCreation as hc
 
 def main():
     # Initialize story manager
@@ -8,19 +9,41 @@ def main():
     
     # Get initial user inputs
     print("Welcome to the Story Generator!")
-    print("First, let's create your hero...")
+    print("Enter your Information...")
     
     user_inputs = {
         'AGE_GROUP': input("Enter age group: "),
         'Gender': input("Enter gender: "),
-        'Number': input("Enter a number: "),
         'LANGUAGE': input("Enter preferred language: "),
         'Heros_name': input("Enter hero's name: "),
-        'Race_species': input("Enter race/species: "),
-        'Magic_or_weapon_preference': input("Enter magic or weapon preference: "),
-        'Role_in_the_current_world': input("Enter the hero's role in the world: ")
+        'Race_species': input("Enter race/secies: "),
+        'Magic_or_weapon_preference': input("Enter Magic or weapon preference: "),
+        'Role_in_the_current_world': input("Enter Hero's Role in the world: "),
+        
     }
     
+    print("Please Enter the Deatail Information About your Fantasy Hero")
+    hero_name = input("Enter Heros Name for Conformation : ")
+    hero_specie = input("Enter the Specie of the Hero: ")
+    hero_gender = input("Enter Hero's Gender fdr Confirmation: ")
+    dress_color = input("Enter Hero's Dress Color: ")
+    hero_class = input("Enter Hero Class (e.g., Fighter, Wizard, Rogue, etc.): ")
+    hero_alignment = input("Enter Hero Alignment (e.g., Lawful Good, Chaotic Neutral): ")
+    hero_age = input("Enter Hero Age Group (e.g., Young, Adult, Elder): ")
+    hero_skills = input("Enter Hero Key Skills (e.g., Bow & Arrows, Fire Magic, Stealth): ")
+    hero_weapon = input("Enter Heros Weapon : ")
+
+    hc.responce_from_Gemini_of_Hero(
+    hero_name,
+    hero_specie,
+    hero_gender,
+    dress_color,
+    hero_class,
+    hero_alignment,
+    hero_age,
+    hero_skills,
+    hero_weapon
+    )
     # Initialize story with user inputs
     story_manager.initialize_story(user_inputs)
     

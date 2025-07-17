@@ -10,14 +10,14 @@ if config.LLM_responce == "Gemini":
     API_URL = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent'
     
     def responce_from_Gemini(
-        AGE_GROUP, Gender, Number, LANGUAGE, Heros_name,
+        AGE_GROUP, Gender, LANGUAGE, Heros_name,
         Race_species, Magic_or_weapon_preference, Role_in_the_current_world,
         previous_episode=None, current_episode=1  # Added new parameters here
     ):
         story_prompt = gsp.generate_story_prompt(
+        
             AGE_GROUP=AGE_GROUP,
             Gender=Gender,
-            Number=Number,
             LANGUAGE=LANGUAGE,
             Heros_name=Heros_name,
             Race_species=Race_species,
